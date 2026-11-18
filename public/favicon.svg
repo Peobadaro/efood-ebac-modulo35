@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125" height="57.5" viewBox="0 0 125 57.5" fill="none">
+  <rect x="2" y="2" width="121" height="53.5" stroke="#E66767" stroke-width="4"/>
+  <text x="12" y="39" font-family="Roboto, Arial, sans-serif" font-weight="900" font-style="italic" font-size="26" fill="#E66767">efood</text>
+  <g fill="#E66767">
+    <rect x="94" y="12" width="2.4" height="11" rx="1"/>
+    <rect x="98.3" y="12" width="2.4" height="11" rx="1"/>
+    <rect x="102.6" y="12" width="2.4" height="11" rx="1"/>
+    <path d="M93.8 22h11.4v2.5c0 2-1.6 3.6-3.6 3.6h-.6V45c0 1.2-.9 2-2 2s-2-.8-2-2V28.1h-.6c-2 0-3.6-1.6-3.6-3.6z"/>
+    <path d="M111 12c3.6 1.5 5.6 6 5.6 12.5v6.5h-1.8V45c0 1.2-.9 2-2 2s-1.8-.8-1.8-2z"/>
+  </g>
+</svg>

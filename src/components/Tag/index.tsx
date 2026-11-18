@@ -1,0 +1,14 @@
+import styled from 'styled-components'
+
+import { cores } from '../../styles'
+
+const Tag = styled.span`
+  display: inline-block;
+  background-color: ${cores.vermelho};
+  color: ${cores.bege};
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 4px;
+`
+
+export default Tag
