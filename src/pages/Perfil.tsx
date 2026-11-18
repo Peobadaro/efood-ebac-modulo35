@@ -9,7 +9,7 @@ const Perfil = () => (
     <Banner
       tipo="Italiana"
       titulo="La Dolce Vita Trattoria"
-      imagem="https://api-ebac.vercel.app/efood/bella_tavola_italiana//capa.jpeg"
+      imagem="https://api-ebac.vercel.app/efood/bella_tavola_italiana//2.jpg"
     />
     <ProductList pratos={pratos} />
   </>
