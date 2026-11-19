@@ -29,7 +29,7 @@ export const restaurantes: Restaurante[] = [
     descricao:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!',
     capa: `${API}/sakura_sushi_house//1.jpg`,
-    banner: `${API}/sakura_sushi_house//capa.jpeg`,
+    banner: `${API}/sakura_sushi_house//1.jpg`,
     cardapio: [
       {
         id: 1,
@@ -116,7 +116,7 @@ export const restaurantes: Restaurante[] = [
     descricao:
       'Sabores do Oriente Médio na sua mesa: mezzes, grelhados e shawarmas preparados com especiarias tradicionais e receitas de família. Peça e viaje sem sair de casa!',
     capa: `${API}/casa_delicias_arabes//1.jpg`,
-    banner: `${API}/casa_delicias_arabes//capa.jpeg`,
+    banner: `${API}/casa_delicias_arabes//2.jpg`,
     cardapio: [
       {
         id: 1,
@@ -149,7 +149,7 @@ export const restaurantes: Restaurante[] = [
     descricao:
       'O melhor da cozinha portuguesa com bacalhau, arroz de pato e petiscos tradicionais. Pratos generosos, feitos como em Portugal, entregues no conforto do seu lar.',
     capa: `${API}/cantinho_lusitano//1.jpeg`,
-    banner: `${API}/cantinho_lusitano//capa.jpeg`,
+    banner: `${API}/cantinho_lusitano//2.jpg`,
     cardapio: [
       {
         id: 1,
@@ -222,7 +222,7 @@ export const restaurantes: Restaurante[] = [
     descricao:
       'Comida vegana saborosa e colorida, com ingredientes frescos e muito sabor. Hambúrgueres, bowls e massas 100% vegetais, preparados com carinho para você.',
     capa: `${API}/jardim_terra//3.jpg`,
-    banner: `${API}/jardim_terra//capa.png`,
+    banner: `${API}/jardim_terra//2.jpeg`,
     cardapio: [
       {
         id: 1,
