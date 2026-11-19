@@ -5,7 +5,8 @@ import { breakpoints, cores } from '../../styles'
 
 export const HeroContainer = styled.header`
   background-color: ${cores.bege};
-  background-image: url(${fundo});
+  background-image: url("${fundo}");
+  background-repeat: repeat;
   padding: 40px 0;
   text-align: center;
 

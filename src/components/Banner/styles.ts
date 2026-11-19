@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 
 export const BannerContainer = styled.div`
   position: relative;
@@ -30,9 +30,17 @@ export const BannerContainer = styled.div`
 export const Tipo = styled.span`
   font-size: 32px;
   font-weight: 100;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 24px;
+  }
 `
 
 export const Titulo = styled.h2`
   font-size: 32px;
   font-weight: 900;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 24px;
+  }
 `

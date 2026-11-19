@@ -1,18 +1,29 @@
+import { Navigate, useParams } from 'react-router-dom'
+
 import Banner from '../components/Banner'
 import Header from '../components/Header'
 import ProductList from '../components/ProductList'
-import { pratos } from '../data/restaurantes'
+import { buscarRestaurante } from '../data/restaurantes'
 
-const Perfil = () => (
-  <>
-    <Header />
-    <Banner
-      tipo="Italiana"
-      titulo="La Dolce Vita Trattoria"
-      imagem="https://api-ebac.vercel.app/efood/bella_tavola_italiana//2.jpg"
-    />
-    <ProductList pratos={pratos} />
-  </>
-)
+const Perfil = () => {
+  const { id } = useParams()
+  const restaurante = buscarRestaurante(Number(id))
+
+  if (!restaurante) {
+    return <Navigate to="/" replace />
+  }
+
+  return (
+    <>
+      <Header />
+      <Banner
+        tipo={restaurante.tipo}
+        titulo={restaurante.titulo}
+        imagem={restaurante.banner}
+      />
+      <ProductList pratos={restaurante.cardapio} />
+    </>
+  )
+}
 
 export default Perfil

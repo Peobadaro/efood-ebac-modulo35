@@ -5,8 +5,9 @@ import { breakpoints, cores } from '../../styles'
 
 export const HeaderContainer = styled.header`
   background-color: ${cores.bege};
-  background-image: url(${fundo});
-  padding: 64px 0;
+  background-image: url("${fundo}");
+  background-repeat: repeat;
+  padding: 53px 0;
 
   .container {
     display: grid;
