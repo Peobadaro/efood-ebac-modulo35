@@ -16,14 +16,14 @@ export const HeaderContainer = styled.header`
   }
 
   a,
-  span {
+  button {
     font-size: 18px;
     font-weight: 900;
     text-decoration: none;
   }
 
-  span {
-    text-align: right;
+  button {
+    justify-self: end;
   }
 
   @media (max-width: ${breakpoints.mobile}) {
@@ -35,8 +35,16 @@ export const HeaderContainer = styled.header`
       gap: 16px;
     }
 
-    span {
-      text-align: center;
+    button {
+      justify-self: center;
     }
   }
+`;
+
+export const CarrinhoBotao = styled.button`
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
 `;

@@ -7,7 +7,7 @@ type Estado<T> = {
 };
 
 // Busca dados por AJAX (fetch) e controla carregando/erro
-export const useFetch = <T,>(buscar: () => Promise<T>, chave: string) => {
+export const useFetch = <T>(buscar: () => Promise<T>, chave: string) => {
   const [estado, setEstado] = useState<Estado<T>>({ carregando: true });
 
   useEffect(() => {

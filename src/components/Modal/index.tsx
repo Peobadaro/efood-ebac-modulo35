@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 
 import type { ItemCardapio } from "../../services/api";
+import { useAppDispatch } from "../../store";
+import { abrir, adicionar } from "../../store/reducers/carrinho";
 import { formataPreco } from "../../utils";
 import * as S from "./styles";
 
@@ -10,6 +12,14 @@ type Props = {
 };
 
 const Modal = ({ prato, aoFechar }: Props) => {
+  const dispatch = useAppDispatch();
+
+  const adicionarAoCarrinho = () => {
+    dispatch(adicionar(prato));
+    aoFechar();
+    dispatch(abrir());
+  };
+
   // Fecha com a tecla Esc e trava a rolagem da página enquanto o modal está aberto
   useEffect(() => {
     const aoApertar = (e: KeyboardEvent) => e.key === "Escape" && aoFechar();
@@ -37,7 +47,7 @@ const Modal = ({ prato, aoFechar }: Props) => {
           <S.Titulo>{prato.nome}</S.Titulo>
           <S.Texto>{prato.descricao}</S.Texto>
           <S.Texto>Serve: {prato.porcao}</S.Texto>
-          <S.Botao type="button">
+          <S.Botao type="button" onClick={adicionarAoCarrinho}>
             Adicionar ao carrinho - {formataPreco(prato.preco)}
           </S.Botao>
         </div>
