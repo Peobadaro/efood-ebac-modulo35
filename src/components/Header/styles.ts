@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import fundo from '../../assets/pattern.svg'
-import { breakpoints, cores } from '../../styles'
+import fundo from "../../assets/pattern.svg";
+import { breakpoints, cores } from "../../styles";
 
 export const HeaderContainer = styled.header`
   background-color: ${cores.bege};
@@ -39,4 +39,4 @@ export const HeaderContainer = styled.header`
       text-align: center;
     }
   }
-`
+`;

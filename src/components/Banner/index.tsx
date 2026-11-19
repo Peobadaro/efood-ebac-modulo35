@@ -1,10 +1,10 @@
-import * as S from './styles'
+import * as S from "./styles";
 
 type Props = {
-  tipo: string
-  titulo: string
-  imagem: string
-}
+  tipo: string;
+  titulo: string;
+  imagem: string;
+};
 
 const Banner = ({ tipo, titulo, imagem }: Props) => (
   <S.BannerContainer style={{ backgroundImage: `url(${imagem})` }}>
@@ -13,6 +13,6 @@ const Banner = ({ tipo, titulo, imagem }: Props) => (
       <S.Titulo>{titulo}</S.Titulo>
     </div>
   </S.BannerContainer>
-)
+);
 
-export default Banner
+export default Banner;

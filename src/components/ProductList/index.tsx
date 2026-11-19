@@ -1,8 +1,10 @@
-import styled from 'styled-components'
+import { useState } from "react";
+import styled from "styled-components";
 
-import ProductCard from '../ProductCard'
-import type { Prato } from '../../data/restaurantes'
-import { breakpoints } from '../../styles'
+import Modal from "../Modal";
+import ProductCard from "../ProductCard";
+import type { ItemCardapio } from "../../services/api";
+import { breakpoints } from "../../styles";
 
 const Lista = styled.ul`
   display: grid;
@@ -17,20 +19,31 @@ const Lista = styled.ul`
   @media (max-width: ${breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
-`
+`;
 
 type Props = {
-  pratos: Prato[]
-}
+  pratos: ItemCardapio[];
+};
 
-const ProductList = ({ pratos }: Props) => (
-  <div className="container">
-    <Lista>
-      {pratos.map((p) => (
-        <ProductCard key={p.id} prato={p} />
-      ))}
-    </Lista>
-  </div>
-)
+const ProductList = ({ pratos }: Props) => {
+  const [selecionado, setSelecionado] = useState<ItemCardapio | null>(null);
 
-export default ProductList
+  return (
+    <div className="container">
+      <Lista>
+        {pratos.map((p) => (
+          <ProductCard
+            key={p.id}
+            prato={p}
+            aoClicar={() => setSelecionado(p)}
+          />
+        ))}
+      </Lista>
+      {selecionado && (
+        <Modal prato={selecionado} aoFechar={() => setSelecionado(null)} />
+      )}
+    </div>
+  );
+};
+
+export default ProductList;

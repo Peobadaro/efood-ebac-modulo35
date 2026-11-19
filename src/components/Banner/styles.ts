@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, cores } from "../../styles";
 
 export const BannerContainer = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ export const BannerContainer = styled.div`
   color: ${cores.branco};
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -25,7 +25,7 @@ export const BannerContainer = styled.div`
     justify-content: space-between;
     padding: 24px 0 32px;
   }
-`
+`;
 
 export const Tipo = styled.span`
   font-size: 32px;
@@ -34,7 +34,7 @@ export const Tipo = styled.span`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: 24px;
   }
-`
+`;
 
 export const Titulo = styled.h2`
   font-size: 32px;
@@ -43,4 +43,4 @@ export const Titulo = styled.h2`
   @media (max-width: ${breakpoints.mobile}) {
     font-size: 24px;
   }
-`
+`;

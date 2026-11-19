@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/logo.svg'
-import * as S from './styles'
+import logo from "../../assets/logo.svg";
+import * as S from "./styles";
 
 const Hero = () => (
   <S.HeroContainer>
@@ -14,6 +14,6 @@ const Hero = () => (
       </S.Titulo>
     </div>
   </S.HeroContainer>
-)
+);
 
-export default Hero
+export default Hero;

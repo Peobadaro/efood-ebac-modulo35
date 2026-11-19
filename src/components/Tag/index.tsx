@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { cores } from '../../styles'
+import { cores } from "../../styles";
 
 const Tag = styled.span`
   display: inline-block;
@@ -9,6 +9,6 @@ const Tag = styled.span`
   font-size: 12px;
   font-weight: bold;
   padding: 6px 4px;
-`
+`;
 
-export default Tag
+export default Tag;

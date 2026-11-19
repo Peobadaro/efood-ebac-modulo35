@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import logo from '../../assets/logo.svg'
-import * as S from './styles'
+import logo from "../../assets/logo.svg";
+import * as S from "./styles";
 
 const Header = () => (
   <S.HeaderContainer>
@@ -13,6 +13,6 @@ const Header = () => (
       <span>0 produto(s) no carrinho</span>
     </div>
   </S.HeaderContainer>
-)
+);
 
-export default Header
+export default Header;

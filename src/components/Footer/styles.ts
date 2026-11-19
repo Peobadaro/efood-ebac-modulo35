@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { cores } from '../../styles'
+import { cores } from "../../styles";
 
 export const FooterContainer = styled.footer`
   background-color: ${cores.bege};
@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const Redes = styled.ul`
   display: flex;
@@ -28,10 +28,10 @@ export const Redes = styled.ul`
     border-radius: 50%;
     background-color: ${cores.vermelho};
   }
-`
+`;
 
 export const Texto = styled.p`
   max-width: 480px;
   font-size: 10px;
   line-height: 12px;
-`
+`;

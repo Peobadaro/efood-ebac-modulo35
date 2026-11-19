@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import fundo from '../../assets/pattern.svg'
-import { breakpoints, cores } from '../../styles'
+import fundo from "../../assets/pattern.svg";
+import { breakpoints, cores } from "../../styles";
 
 export const HeroContainer = styled.header`
   background-color: ${cores.bege};
@@ -15,7 +15,7 @@ export const HeroContainer = styled.header`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 export const Titulo = styled.h1`
   margin-top: 138px;
@@ -29,4 +29,4 @@ export const Titulo = styled.h1`
     font-size: 24px;
     line-height: 32px;
   }
-`
+`;

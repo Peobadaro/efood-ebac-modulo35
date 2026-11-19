@@ -1,9 +1,9 @@
-import { HashRouter } from 'react-router-dom'
+import { HashRouter } from "react-router-dom";
 
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import Rotas from './routes'
-import { GlobalStyle } from './styles'
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Rotas from "./routes";
+import { GlobalStyle } from "./styles";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Rotas />
       <Footer />
     </HashRouter>
-  )
+  );
 }
 
-export default App
+export default App;

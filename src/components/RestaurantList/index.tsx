@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import RestaurantCard from '../RestaurantCard'
-import type { Restaurante } from '../../data/restaurantes'
-import { breakpoints } from '../../styles'
+import RestaurantCard from "../RestaurantCard";
+import type { Restaurante } from "../../services/api";
+import { breakpoints } from "../../styles";
 
 const Lista = styled.ul`
   display: grid;
@@ -15,11 +15,11 @@ const Lista = styled.ul`
     grid-template-columns: 1fr;
     column-gap: 0;
   }
-`
+`;
 
 type Props = {
-  restaurantes: Restaurante[]
-}
+  restaurantes: Restaurante[];
+};
 
 const RestaurantList = ({ restaurantes }: Props) => (
   <div className="container">
@@ -29,6 +29,6 @@ const RestaurantList = ({ restaurantes }: Props) => (
       ))}
     </Lista>
   </div>
-)
+);
 
-export default RestaurantList
+export default RestaurantList;
