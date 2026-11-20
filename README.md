@@ -30,3 +30,13 @@ npm run dev
 - O cabeçalho mostra a quantidade de produtos e abre o carrinho
 - Remover item pela lixeira; fecha no Esc ou clicando fora
 - Publicado em: https://efood-ebac-modulo37.vercel.app/
+
+## Parte 4 (módulo 38) – branch `modulo-38`
+
+- Fluxo de checkout dentro da barra lateral (Figma "Entrega", "Pagamento" e "Confirmação")
+  - **Entrega**: quem recebe, endereço, cidade, CEP, número e complemento
+  - **Pagamento**: nome no cartão, número, CVV, mês e ano de vencimento, com o valor total a pagar
+  - Validação com **Formik + Yup** e máscaras de CEP e cartão
+- "Finalizar pagamento" faz um **POST** para https://api-ebac.vercel.app/api/efood/checkout (RTK Query)
+- **Confirmação** exibe o `orderId` devolvido pela API; "Concluir" esvazia o carrinho
+- Publicado em: https://efood-ebac-modulo38.vercel.app/

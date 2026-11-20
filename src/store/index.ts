@@ -1,12 +1,16 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
+import checkoutApi from "../services/checkout";
 import carrinhoReducer from "./reducers/carrinho";
 
 export const store = configureStore({
   reducer: {
     carrinho: carrinhoReducer,
+    [checkoutApi.reducerPath]: checkoutApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(checkoutApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

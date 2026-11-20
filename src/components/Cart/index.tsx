@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 
-import { fechar, remover } from "../../store/reducers/carrinho";
+import Checkout from "../Checkout";
+import { fechar, irPara, remover } from "../../store/reducers/carrinho";
 import { selectTotal, useAppDispatch, useAppSelector } from "../../store";
 import { formataPreco } from "../../utils";
 import * as S from "./styles";
 
 const Cart = () => {
-  const { itens, aberto } = useAppSelector((state) => state.carrinho);
+  const { itens, aberto, etapa } = useAppSelector((state) => state.carrinho);
   const total = useAppSelector(selectTotal);
   const dispatch = useAppDispatch();
 
@@ -31,7 +32,9 @@ const Cart = () => {
         data-testid="carrinho-overlay"
       />
       <S.Sidebar aria-label="Carrinho">
-        {itens.length === 0 ? (
+        {etapa !== "carrinho" ? (
+          <Checkout />
+        ) : itens.length === 0 ? (
           <S.Vazio>
             Seu carrinho está vazio. Adicione pelo menos um produto para
             continuar com a compra.
@@ -58,7 +61,9 @@ const Cart = () => {
               <span>Valor total</span>
               <span>{formataPreco(total)}</span>
             </S.Total>
-            <S.Botao type="button">Continuar com a entrega</S.Botao>
+            <S.Botao type="button" onClick={() => dispatch(irPara("entrega"))}>
+              Continuar com a entrega
+            </S.Botao>
           </>
         )}
       </S.Sidebar>
