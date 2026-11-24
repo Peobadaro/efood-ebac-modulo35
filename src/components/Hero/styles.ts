@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
-import fundo from '../../assets/pattern.svg'
+import fundo from '../../assets/images/fundo.png'
 import { breakpoints, cores } from '../../styles'
 
 export const HeroContainer = styled.header`
   background-color: ${cores.bege};
   background-image: url("${fundo}");
-  background-repeat: repeat;
-  padding: 40px 0;
+  background-size: cover;
+  background-position: center;
+  height: 384px;
+  padding: 64px 0 40px;
   text-align: center;
 
   .container {

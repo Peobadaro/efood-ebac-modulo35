@@ -25,8 +25,6 @@ export const Redes = styled.ul`
     justify-content: center;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
-    background-color: ${cores.vermelho};
   }
 `
 
